@@ -1,0 +1,126 @@
+/* Reset some default styles */
+body, h1, form, label, input, button, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Gradient background */
+body {
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 400px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin: auto;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#length {
+    color: black;
+    font-size: larger;
+}
+
+input[type="number"], input[type="checkbox"] {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    width: calc(100% - 1rem);
+    color: black;
+    
+}
+
+input[type="number"] {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, color 0.3s;
+}
+
+input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="number"]:focus {
+    background: rgba(255, 255, 255, 0.4);
+    outline: none;
+}
+
+button {
+    background: #5151E5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background: #72EDF2;
+    transform: scale(1.05);
+}
+
+button:active {
+    background: #5151E5;
+    transform: scale(0.95);
+}
+
+p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    color: rgb(0, 247, 12);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    form {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="number"], button {
+        width: calc(100% - 1rem);
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
